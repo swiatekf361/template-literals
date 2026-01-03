@@ -1,4 +1,8 @@
 # Changelog
+## v.1.2
+- Removing new lines inside literals
+- Added dark mode
+
 ## v.1.1
 - Mathematical operations are now enclosed in brackets
 

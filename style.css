@@ -3,8 +3,8 @@ body {
 }
 
 body > div {
-    display: flex;
-    gap: 10px;
+	display: flex;
+	gap: 10px;
 }
 
 body > div div {
@@ -12,19 +12,19 @@ body > div div {
 }
 
 h1, h1 + p, h1 + h2, button {
-    text-align: center;
+	text-align: center;
 }
 
 button {
-    margin: auto;
+	margin: auto;
 }
 
 textarea {
 	width: -moz-available;
 	width: -webkit-fill-available;
 	width: stretch;
-    resize: vertical;
-    height: 300px;
+	resize: vertical;
+	height: 300px;
 }
 
 span#important {
@@ -43,7 +43,6 @@ div#bg {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, yellow), color-stop(100%, transparent));
 	background: -webkit-linear-gradient(270deg, yellow, transparent);
 	background: -moz-linear-gradient(270deg, yellow, transparent);
-	background: -o-linear-gradient(270deg, yellow, transparent);
 	background: linear-gradient(to bottom, yellow, transparent);
 }
 
@@ -56,5 +55,23 @@ div#bg {
 	}
 	textarea {
 		height: 150px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color-scheme: dark;
+		background: #222;
+		color: white;
+	}
+	span#important {
+		color: salmon;
+	}
+	div#bg {
+		background-color: gold;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, gold), color-stop(100%, transparent));
+		background: -webkit-linear-gradient(270deg, gold, transparent);
+		background: -moz-linear-gradient(270deg, gold, transparent);
+		background: linear-gradient(to bottom, gold, transparent);
 	}
 }

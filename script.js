@@ -5,7 +5,7 @@ function convert() {
         original_literal = literals[l];
             literals[l] = literals[l].replaceAll("\"", "\\\"")
         invars = literals[l].match(/\$\{[^{^}]+\}/g);
-        literals[l] = literals[l].replaceAll("`", '"');
+        literals[l] = literals[l].replaceAll("`", '"').replaceAll("\n", "");
 
         for (i in invars) {
 			if (invars[i].indexOf("+") != -1 || invars[i].indexOf("-") != -1 || invars[i].indexOf("*") != -1 || invars[i].indexOf("/") != -1)
