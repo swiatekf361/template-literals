@@ -16,8 +16,8 @@ function convert() {
         
         
         src = src.replace(original_literal, literals[l]);
+		src = src.replace('"" + ', "");
 		src = src.replace(' + ""', "");
-		src = src.replace(" + ''", "");
     }
     res = document.getElementById("old");
     res.value = src;

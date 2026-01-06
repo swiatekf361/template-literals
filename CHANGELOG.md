@@ -1,6 +1,9 @@
 # Changelog
+## v.1.3
+- Literals with expressions at the very beginning won't throw empty strings now
+
 ## v.1.2
-- Removing new lines inside literals
+- New lines inside literals will be removed
 - Added dark mode
 
 ## v.1.1
