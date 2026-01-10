@@ -1,4 +1,8 @@
 # Changelog
+## v.1.3.1
+- Added warning when JavaScript is disabled
+- Slight code refactor
+
 ## v.1.3
 - Literals with expressions at the very beginning won't throw empty strings now
 

@@ -2,12 +2,12 @@ body {
 	font-family: sans-serif;
 }
 
-body > div {
+#app > div {
 	display: flex;
 	gap: 10px;
 }
 
-body > div div {
+#app > div div {
 	width: 50%;
 }
 
@@ -46,11 +46,15 @@ div#bg {
 	background: linear-gradient(to bottom, yellow, transparent);
 }
 
+div#app {
+	display: none;
+}
+
 @media (max-width: 600px) {
-	body > div {
+	#app > div {
 		flex-direction: column;
 	}
-	body > div div {
+	#app > div div {
 		width: 100%;
 	}
 	textarea {
@@ -69,9 +73,6 @@ div#bg {
 	}
 	div#bg {
 		background-color: gold;
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, gold), color-stop(100%, transparent));
-		background: -webkit-linear-gradient(270deg, gold, transparent);
-		background: -moz-linear-gradient(270deg, gold, transparent);
 		background: linear-gradient(to bottom, gold, transparent);
 	}
 }

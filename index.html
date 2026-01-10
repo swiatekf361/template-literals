@@ -8,24 +8,30 @@
     <script src="script.js"></script>
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
-<body>
+<body onload="document.getElementById('app').style.display = 'block'">
 	<div id="bg"></div>
     <h1>Template literals to normal strings</h1>
     <p>Paste your code here and convert template literals to normal strings easily.</p>
-    <div>
+    <noscript>
+        <hr>
+        To use this tool enable JavaScript or use different browser.
+    </noscript>
+    <div id="app">
         <div>
-            <h3>Your code (w/ template literals)</h3>
-            <textarea name="es6" id="es6"></textarea>
+            <div>
+                <h3>Your code (w/ template literals)</h3>
+                <textarea name="es6" id="es6"></textarea>
+            </div>
+            <div>
+                <h3>Generated code (w/ normal strings)</h3>
+                <textarea oninput="convert()" name="old" id="old"></textarea>
+            </div>
         </div>
-        <div>
-            <h3>Generated code (w/ normal strings)</h3>
-            <textarea oninput="convert()" name="old" id="old"></textarea>
-        </div>
+        <center>
+            <button id="conv" onclick="convert()">Convert!</button>&nbsp;	
+            <!-- <button id="copy" onclick="copytxt()" disabled>Copy result</button><br> -->
+        </center>
     </div>
-    <center>
-        <button id="conv" onclick="convert()">Convert!</button>&nbsp;	
-        <!-- <button id="copy" onclick="copytxt()" disabled>Copy result</button><br> -->
-    </center>
     <hr>
     <h2>Why template strings?</h2>
     <p>Template literals are determined with backtick character (`). It allows multi-line strings and easy combining variables or expressions.</p>
@@ -40,6 +46,6 @@
 		<li><a href="https://caniuse.com/mdn-javascript_grammar_template_literals">Browser compatibility table on Can I use</a> <small><i>(caniuse.com)</i></small></li>
 	</ul>
 	<hr>
-	<i>@swiatekf361 = 2025</i>
+	<i>@swiatekf361 - 2026</i>
 </body>
 </html>
