@@ -8,7 +8,7 @@
     <script src="script.js"></script>
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
-<body onload="document.getElementById('app').style.display = 'block'">
+<body onload="check()">
 	<div id="bg"></div>
     <h1>Template literals to normal strings</h1>
     <p>Paste your code here and convert template literals to normal strings easily.</p>
@@ -17,7 +17,7 @@
         To use this tool enable JavaScript or use different browser.
     </noscript>
     <div id="app">
-        <div>
+        <div id="code">
             <div>
                 <h3>Your code (w/ template literals)</h3>
                 <textarea name="es6" id="es6"></textarea>
@@ -27,10 +27,10 @@
                 <textarea oninput="convert()" name="old" id="old"></textarea>
             </div>
         </div>
-        <center>
+        <div id="btns">
             <button id="conv" onclick="convert()">Convert!</button>&nbsp;	
-            <!-- <button id="copy" onclick="copytxt()" disabled>Copy result</button><br> -->
-        </center>
+            <button id="copy" onclick="copytxt()" disabled style="display: none;">Copy result</button><br>
+        </div>
     </div>
     <hr>
     <h2>Why template strings?</h2>

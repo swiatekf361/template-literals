@@ -1,4 +1,8 @@
 # Changelog
+## v.1.3.2
+- Added 'copy result' button
+- Yet another small unnecesary refactor
+
 ## v.1.3.1
 - Added warning when JavaScript is disabled
 - Slight code refactor
