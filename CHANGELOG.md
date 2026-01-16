@@ -1,4 +1,8 @@
 # Changelog
+
+## v.1.3.3
+- Bug fix
+
 ## v.1.3.2
 - Added 'copy result' button
 - Yet another small unnecesary refactor

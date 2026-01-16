@@ -8,13 +8,13 @@ function convert() {
 	document.getElementById("copy").disabled = false;
 }
 
-function literal(text) {
-    literals = text.match(/`[^`]*`/g);
+function literal(src) {
+    literals = src.match(/`[^`]*`/g);
     for (l in literals) {
         original_literal = literals[l];
-        literals[l] = literals[l].replaceAll("\"", "\\\"")
+		literals[l] = literals[l].replaceAll("\"", "\\\"")
         invars = literals[l].match(/\$\{[^{^}]+\}/g);
-        literals[l] = literals[l].replaceAll("`", '"').replaceAll("\n", "");
+        literals[l] = literals[l].replaceAll("`", '"');
 
         for (i in invars) {
 			if (invars[i].indexOf("+") != -1 || invars[i].indexOf("-") != -1 || invars[i].indexOf("*") != -1 || invars[i].indexOf("/") != -1)
@@ -23,11 +23,11 @@ function literal(text) {
 				literals[l] = literals[l].replace(invars[i], '" + ' + invars[i].slice(2, -1) + ' + "');
 		}
         
-        text = text.replace(original_literal, literals[l]);
-		text = text.replace('"" + ', "");
-		text = text.replace(' + ""', "");
+        src = src.replace(original_literal, literals[l]);
+		src = src.replace(' + ""', "");
+		src = src.replace(" + ''", "");
     }
-    return text
+    return src;
 }
 
 function copytxt() {
