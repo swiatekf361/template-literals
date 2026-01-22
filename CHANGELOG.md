@@ -1,5 +1,9 @@
 # Changelog
 
+## v.1.4
+- Fixed strings inside expressions
+- Expressions with conditional operators (shorthand ifs) are enclosed in brackets
+
 ## v.1.3.3
 - Bug fix
 
