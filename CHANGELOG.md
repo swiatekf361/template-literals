@@ -1,5 +1,9 @@
 # Changelog
 
+## v.1.4.1
+- Splitted website-demo script from literals-converting script
+- Added link to source code
+
 ## v.1.4
 - Fixed strings inside expressions
 - Expressions with conditional operators (shorthand ifs) are enclosed in brackets
