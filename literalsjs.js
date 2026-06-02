@@ -1,3 +1,6 @@
+// template literals converter
+// made by @swiatekf361
+
 function literal(src) {
     literals = src.match(/`[^`]*`/g);
     for (l in literals) {
@@ -7,7 +10,7 @@ function literal(src) {
         literals[l] = literals[l].replaceAll("`", '"');
 
         for (i in invars) {
-			if (invars[i].indexOf("+") != -1 || invars[i].indexOf("-") != -1 || invars[i].indexOf("*") != -1 || invars[i].indexOf("/") != -1 || invars[i].indexOf("?"))
+			if (invars[i].indexOf("+") != -1 || invars[i].indexOf("-") != -1 || invars[i].indexOf("*") != -1 || invars[i].indexOf("/") != -1 || invars[i].indexOf("?") != -1)
 				literals[l] = literals[l].replace(invars[i], '" + (' + invars[i].slice(2, -1).replaceAll("\\\"", "\"") + ') + "');
 			else
 				literals[l] = literals[l].replace(invars[i], '" + ' + invars[i].slice(2, -1).replaceAll("\\\"", "\"") + ' + "');
@@ -15,7 +18,7 @@ function literal(src) {
         
         src = src.replace(original_literal, literals[l]);
 		src = src.replace(' + ""', "");
-		src = src.replace(" + ''", "");
+		src = src.replace('"" + ', "");
     }
     return src;
 }

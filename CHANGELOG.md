@@ -1,5 +1,8 @@
 # Changelog
 
+## v.1.4.2
+- Fixed bug that caused enclosing every expression in brackets
+
 ## v.1.4.1
 - Splitted website-demo script from literals-converting script
 - Added link to source code
